@@ -21,7 +21,6 @@ export default function RTE({name, control, label, defaultValue =""}) {
             height: 500,
             menubar: true,
             plugins: [
-                "image",
                 "advlist",
                 "autolink",
                 "lists",
@@ -37,13 +36,17 @@ export default function RTE({name, control, label, defaultValue =""}) {
                 "insertdatetime",
                 "media",
                 "table",
-                "code",
                 "help",
-                "wordcount",
-                "anchor",
+                "wordcount"
             ],
             toolbar:
-            "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
+                "undo redo | blocks | " +
+                "bold italic underline blockquote | " +
+                "link image media | " +
+                "forecolor backcolor | " +
+                "alignleft aligncenter alignright alignjustify | " +
+                "bullist numlist outdent indent | " +
+                "removeformat | code preview fullscreen | help",
             content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
         }}
         onEditorChange={onChange}
