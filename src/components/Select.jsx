@@ -4,8 +4,9 @@ function Select({
     options,
     label,
     className,
+    ref,
     ...props
-}, ref) {
+}) {
     const id = useId()
   return (
     <div className='w-full'>
@@ -26,4 +27,4 @@ function Select({
   )
 }
 
-export default React.forwardRef(Select)
+export default Select
